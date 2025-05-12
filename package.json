@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "start:prod": "npm run build && cross-env NODE_ENV=production node dist/bundle.js",
     "start:dev": "cross-env NODE_ENV=development ts-node-dev ./src/index.ts",
-    "start:multi": "cross-env NODE_ENV=production node dist/bundle.js --multi",
+    "start:multi": "cross-env NODE_ENV=development ts-node-dev src/index.ts --multi",
     "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
     "lint:fix": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix",
     "format": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
